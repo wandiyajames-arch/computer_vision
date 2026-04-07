@@ -1,0 +1,13 @@
+Command used:
+curl.exe -X POST -F "file=@sample.jpg" http://localhost:8080/predict
+
+Latency:
+The response was received in approximately 1-2 seconds based on
+observed terminal response speed after sending the POST request.
+
+Observations:
+The API returned valid predictions for the sample image with a correctly
+structured JSON response containing all 6 Intel Image Classification classes.
+Latency was consistent and acceptable across multiple runs of the endpoint.
+The JSON structure matched the expected design spec with image_id and
+predictions fields, and the service is ready for QA handoff.

@@ -1,0 +1,16 @@
+# Ignore virtual environment
+venv311/
+venv/
+.venv/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore model files
+*.h5
+*.pkl
