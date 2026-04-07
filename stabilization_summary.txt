@@ -1,0 +1,24 @@
+Stabilization Summary — U-Net Segmentation Model
+
+Baseline Instability Observed:
+The baseline model used random_normal initialization with no 
+BatchNormalization or Dropout. During the first 10 epochs, the 
+loss curve showed significant spikes and oscillations, with 
+validation loss diverging from training loss early on. Accuracy 
+was unstable and inconsistent across epochs.
+
+Biggest Improvement:
+He initialization (he_normal) made the biggest single improvement 
+by ensuring proper weight scaling for ReLU activations, eliminating 
+early epoch spikes and allowing gradients to flow more consistently.
+
+How Techniques Worked Together:
+He initialization stabilized early training, BatchNormalization 
+normalized activations between layers reducing internal covariate 
+shift, and Dropout (0.2) prevented early overfitting. Together they 
+produced smooth, consistent loss curves with stable convergence.
+
+Next Steps:
+If minor instability remained, I would reduce the learning rate 
+using a scheduler, add gradient clipping, or experiment with 
+higher Dropout rates in the bottleneck layer.
