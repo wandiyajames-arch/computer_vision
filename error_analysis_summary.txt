@@ -1,0 +1,21 @@
+Error Analysis Summary — Vehicle Detection Model
+
+Condition Performance:
+- Daytime  mAP : 1.0000
+- Nighttime mAP: 0.3800
+- Performance Gap: 0.6200
+
+Which condition underperforms:
+Nighttime performance is significantly lower than daytime,
+with a mAP drop of 0.6200 points.
+
+Root Cause:
+The model was likely trained predominantly on daytime images,
+causing it to underperform in low-light conditions where
+vehicle features such as edges, color, and texture are
+less visible to the model.
+
+Recommendation:
+Retrain the model with augmented nighttime data including
+brightness reduction, contrast adjustment, and noise injection
+to improve detection under low-light conditions.
