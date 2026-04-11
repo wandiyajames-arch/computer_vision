@@ -1,0 +1,5 @@
+Variant,MeanIoU,Std_Dev,Delta_vs_Baseline,Interpretation
+Baseline,0.612,0.018,0.0,Baseline reference
+Switch Optimizer,0.624,0.02,0.012,Within noise range
+Change Batch Size,0.619,0.017,0.007,Within noise range
+Add Skip Connections,0.671,0.015,0.059,Meaningful improvement

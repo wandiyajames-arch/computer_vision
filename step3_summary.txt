@@ -1,0 +1,18 @@
+Ablation Study Summary — Segmentation Model
+
+This ablation study tested three modifications against a baseline
+segmentation model with MeanIoU of 0.612 and standard deviation of 0.018.
+
+The meaningful improvement threshold was set at 2x baseline standard
+deviation (0.036). Switching optimizers produced a delta of +0.012 and
+changing batch size produced +0.007, both falling within the noise range.
+
+Adding skip connections produced a delta of +0.059, the only change
+exceeding the meaningful threshold, improving MeanIoU to 0.671.
+
+Skip connections improve gradient flow across layers allowing the model
+to preserve spatial features during segmentation which explains the
+significant gain.
+
+The logical next experiment would be to combine skip connections with
+optimizer switching to determine if the improvements are additive.
