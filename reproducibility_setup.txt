@@ -1,0 +1,36 @@
+
+REPRODUCIBLE EXPERIMENT SETUP
+==============================
+
+Random Seed:
+  seed: 42
+  torch.manual_seed(42)
+  numpy.random.seed(42)
+
+Framework Versions:
+  Python    : 3.11
+  PyTorch   : 2.10.0+cpu
+  TensorFlow: 2.21.0
+  NumPy     : 2.4.2
+
+Dataset:
+  Name    : Intel Image Classification
+  Version : 2
+  Split   : 80% train / 20% validation
+  Classes : buildings, forest, glacier, mountain, sea, street
+
+Model Configuration:
+  Architecture : U-Net with skip connections
+  Optimizer    : Adam (lr=0.001)
+  Batch Size   : 16
+  Epochs       : 10
+  Loss         : Binary Crossentropy
+  Metric       : Mean IoU
+
+Training Command:
+  python train.py --seed 42 --epochs 10 --batch_size 16 --optimizer adam
+
+Environment:
+  OS       : Windows 11
+  Hardware : CPU
+  venv     : Python 3.11 virtual environment

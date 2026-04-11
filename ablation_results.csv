@@ -1,0 +1,5 @@
+Variant,Mean_IoU,Std_Dev,Delta_vs_Baseline,Interpretation
+"Baseline (Adam, bs=16, no skip)",0.842,0.018,0.0,Baseline reference
+Change Optimizer (SGD),0.851,0.021,0.009,Within variance
+Change Batch Size (32),0.847,0.019,0.005,Within variance
+Add Skip Connections,0.893,0.014,0.051,Clear improvement

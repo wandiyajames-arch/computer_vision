@@ -1,0 +1,20 @@
+Final Experiment Summary — Segmentation Model Ablation Study
+
+What was tested:
+Three controlled variations were tested against a baseline segmentation
+model achieving 0.842 mean IoU: switching optimizer from Adam to SGD,
+increasing batch size from 16 to 32, and adding skip connections.
+
+Most meaningful change:
+Adding skip connections produced the only meaningful improvement with
+mean IoU of 0.893, a delta of +0.051 exceeding the 2x standard deviation
+threshold of 0.036. Optimizer and batch size changes remained within
+the noise range.
+
+Reproducibility:
+All experiments used random seed 42, fixed framework versions, and
+identical dataset splits documented in reproducibility_setup.txt.
+
+Next experiment:
+Combine skip connections with the Adam optimizer at a lower learning
+rate of 0.0001 to determine if further gains are achievable.
